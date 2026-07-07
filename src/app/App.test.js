@@ -25,9 +25,13 @@ jest.mock('expo-device', () => ({
 import HomeScreen from './index';
 
 describe('<HomeScreen />', () => {
-  it('renders correctly', () => {
-    const component = renderer.create(<HomeScreen />);
+ it("renders correctly", () => {
+  let component;
 
-    expect(component).toBeDefined();
+  act(() => {
+    component = renderer.create(<HomeScreen />);
   });
+
+  expect(component).toBeDefined();
+});
 });
