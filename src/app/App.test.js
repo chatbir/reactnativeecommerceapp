@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 
+import renderer, { act } from "react-test-renderer";
 // Mock Animated Icon
 jest.mock('@/components/animated-icon', () => ({
   AnimatedIcon: () => null,
